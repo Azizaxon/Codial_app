@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@color/black"
+        android:alpha="0.98"
+        android:src="@drawable/cloud_security" />
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="90dp"
+        android:src="@drawable/logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<!--    #296FBD-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCourses"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="#296FBD"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+       android:layout_marginLeft="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/cardGroups"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cardGroups"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageCourses"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_for_education_24"
+                app:layout_constraintBottom_toTopOf="@id/tvCourses"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCourses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kurslar"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageCourses"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    #FF9D00-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGroups"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="#296FBD"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cardMentors"
+        app:layout_constraintLeft_toRightOf="@id/cardCourses"
+        app:layout_constraintRight_toLeftOf="@id/cardMentors"
+        app:layout_constraintTop_toBottomOf="@id/cardCourses">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageGroups"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_group_24"
+                app:layout_constraintBottom_toTopOf="@id/tvGroups"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvGroups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guruhlar"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageGroups"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMentors"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="#296FBD"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        android:layout_marginRight="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/cardGroups"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardGroups">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageMentors"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_record_voice_over_24"
+                app:layout_constraintBottom_toTopOf="@id/tvMentors"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMentors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mentorlar"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageMentors"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_codial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="codial.uz"
+        android:textColor="#FF9D00"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="HardcodedText" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

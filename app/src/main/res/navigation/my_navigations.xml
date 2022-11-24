@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigations"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/studentAddEditFragment"
+        android:name="uz.aziza.codial_app.StudentAddEditFragment"
+        android:label="fragment_student_add_edit"
+        tools:layout="@layout/fragment_student_add_edit" />
+    <fragment
+        android:id="@+id/mentorsAddFragment"
+        android:name="uz.aziza.codial_app.MentorsAddFragment"
+        android:label="fragment_mentors_add"
+        tools:layout="@layout/fragment_mentors_add" />
+    <fragment
+        android:id="@+id/groupsAddFragment"
+        android:name="uz.aziza.codial_app.GroupsAddFragment"
+        android:label="fragment_groups_add"
+        tools:layout="@layout/fragment_groups_add" />
+    <fragment
+        android:id="@+id/coursesShowFragment"
+        android:name="uz.aziza.codial_app.CoursesShowFragment"
+        android:label="fragment_courses_show"
+        tools:layout="@layout/fragment_courses_show" />
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="uz.aziza.codial_app.GroupsFragment"
+        android:label="fragment_groups"
+        tools:layout="@layout/fragment_groups" >
+        <action
+            android:id="@+id/action_groupsFragment_to_groupsShowFragment"
+            app:destination="@id/groupsShowFragment" />
+        <action
+            android:id="@+id/action_groupsFragment_to_groupsAddFragment"
+            app:destination="@id/groupsAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupsShowFragment"
+        android:name="uz.aziza.codial_app.GroupsShowFragment"
+        android:label="fragment_groups_show"
+        tools:layout="@layout/fragment_groups_show" >
+        <action
+            android:id="@+id/action_groupsShowFragment_to_studentAddEditFragment"
+            app:destination="@id/studentAddEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mentorFragment"
+        android:name="uz.aziza.codial_app.MentorFragment"
+        android:label="fragment_mentor"
+        tools:layout="@layout/fragment_mentor" >
+        <action
+            android:id="@+id/action_mentorFragment_to_mentorsAddFragment"
+            app:destination="@id/mentorsAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.aziza.codial_app.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_coursesFragment"
+            app:destination="@id/coursesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="uz.aziza.codial_app.CoursesFragment"
+        android:label="fragment_courses"
+        tools:layout="@layout/fragment_courses" >
+        <action
+            android:id="@+id/action_coursesFragment_to_groupsFragment"
+            app:destination="@id/groupsFragment" />
+        <action
+            android:id="@+id/action_coursesFragment_to_coursesShowFragment"
+            app:destination="@id/coursesShowFragment" />
+        <action
+            android:id="@+id/action_coursesFragment_to_mentorFragment"
+            app:destination="@id/mentorFragment" />
+    </fragment>
+</navigation>
